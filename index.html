@@ -2,28 +2,32 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Portfolio Page</title>
   </head>
 
   <body>
-    <header>
-      <span>The Code Review</span>
-    </header>
-    <form class="" action="index.html" method="post">
+    <header class="header">
+      <span  class="logo">THE CODE REVIEW</span>
       <h1>Signup for our newsletter</h1>
       <p>Get the latest news on how your code is doing right in your inbox</p>
+    </header>
+    <form class="main_container" action="index.html" method="post">
 
-      <fieldset>
+    <hr class="divider hr_1">
+    <hr class="divider hr_2">
+
+      <fieldset class="contact_container">
 
         <legend>Contact Information</legend>
 
           <label for="name">Full Name</label>
-          <input type="text" name="name" id="name" required value="required">
+          <input type="text" name="name" id="name" required value="Required">
 
           <label for="email">Email Address</label>
-          <input type="email" name="email" id="email" required value="required">
+          <input type="email" name="email" id="email" required value="Required">
 
           <label for="phone">Phone Number</label>
           <input type="tel" name="phone" id="phone">
@@ -95,7 +99,9 @@
 
       </fieldset>
 
-      <fieldset>
+    <hr class="divider hr_3">
+
+      <fieldset class="newsletter_container">
 
         <legend>Newsletter</legend>
 
@@ -122,7 +128,7 @@
             <textarea id="topics" name="other_topics"></textarea>
       </fieldset>
 
-      <button type="submit">Sign Up</button>
+      <button type="submit" class="signup_button">Sign Up</button>
 
     <footer>Copyright The Code Review</footer>
 

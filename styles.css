@@ -1,0 +1,88 @@
+* {
+  font-family: 'Slabo 27px', serif;
+  color: rgba(45, 63, 93, .50);
+}
+
+/******************* Base Styles *******************/
+
+
+/******************* Header Styles *******************/
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: block;
+  max-width: 100%;
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #2D3f5d;
+  color: white;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  font-size: 1.5em;
+  color: #2D2F6A;
+}
+
+.header p {
+  color: rgba(45, 63, 93, .50);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+
+/******************* Form Styles *******************/
+
+.contact_container,
+.newsletter_container {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  border: none;
+  margin: 20px auto 0 auto;
+}
+
+.divider {
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 3px;
+}
+
+.hr_1 {
+  border: 2px solid #2D3f5d;
+}
+
+.hr_2,
+.hr_3 {
+  border: 1px solid #2D3f5d;
+}
+
+legend {
+  font-size: 1.5em;
+  color: #2D2F6A;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+input,
+#state {
+  background-color: #e3e3e3;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#zip {
+  width: 50%;
+}
+
+/******************* Footer Styles *******************/
