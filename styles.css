@@ -1,11 +1,11 @@
-* {
-  font-family: 'Work Sans', sans-serif;
-  color: rgba(45, 63, 93, .50);
-  box-sizing: border-box;
-}
 
 /******************* Base Styles *******************/
 
+* {
+  font-family: 'Work Sans', sans-serif;
+  color: rgba(45, 63, 93, .65);
+  box-sizing: border-box;
+}
 
 /******************* Header Styles *******************/
 
@@ -26,7 +26,8 @@
 }
 
 .header_text {
-  max-width: 400px;
+  width: 90%;
+  max-width: 380px;
   margin: 0 auto;
   padding-right: 10px;
   padding-left: 10px;
@@ -39,6 +40,7 @@
 
 .header p {
   color: rgba(45, 63, 93, .50);
+  font-size: .9em;
 }
 
 
@@ -53,7 +55,12 @@
 .contact_container,
 .newsletter_container {
   width: 90%;
+  padding: 10px;
   margin: 0 auto;
+}
+
+.contact_container {
+  background-color:  rgba(84,39,63,0.3);
 }
 
 .contact_container fieldset,
@@ -88,8 +95,20 @@ legend {
   font-size: 1.5em;
   color: #2d2f6a;
   font-weight: bold;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   padding-top: 20px;
+}
+
+.newsletter_label {
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+/******************* Form Field Styles *******************/
+
+.contact_flex label {
+  font-size: .9em;
 }
 
 input,
@@ -101,12 +120,7 @@ select {
   border: none;
   border-radius: 5px;
   padding-left: 10px;
-}
-
-input:focus,
-textarea:focus {
-  border: 3px solid rgb(84,39,63);
-  background: rgba(84,39,63,.2);
+  outline: none;
 }
 
 input[type="text"],
@@ -114,7 +128,19 @@ input[type="email"],
 input[type="tel"],
 textarea,
 #state {
+  border: none;
   height: 40px;
+  transition: ease-in-out border 1.5s, background-color 1s, color 1s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+#state:focus {
+  border: 3px solid rgb(84,39,63);
+  background-color: darkgrey;
+  color: #e3e3e3;
 }
 
 #zip {
@@ -131,15 +157,10 @@ input[type="checkbox"] {
   flex-direction: column;
 }
 
-.newsletter_label {
-  display: block;
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
-
 textarea {
   height: 100px;
   width: 100%;
+  padding: 10px;
 }
 
 .signup_button {
@@ -154,6 +175,7 @@ button[type="submit"] {
   border: none;
   border-radius: 5px;
   padding: 15px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
@@ -163,11 +185,11 @@ input::placeholder {
   color: rgba(45, 63, 93, .30);
 }
 
-input::-webkit-input-placeholder { /* Edge */
-  text-align: right;
-  font-style: italic;
-  font-style: italic;
-  color: rgba(45, 63, 93, .30);
+#phone::placeholder,
+#address::placeholder,
+#city::placeholder,
+#zip::placeholder {
+  text-align: left;
 }
 
 input:-ms-input-placeholder { /* Internet Explorer 10-11 */
@@ -177,14 +199,26 @@ input:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: rgba(45, 63, 93, .30);
 }
 
+#phone:-ms-input-placeholder,
+#address:-ms-input-placeholder,
+#city:-ms-input-placeholder,
+#zip:-ms-input-placeholder  { /* Internet Explorer 10-11 */
+  text-align: left;
+}
+
 /******************* Footer Styles *******************/
 
 footer {
+  display: block;
+  max-width: 100%;
+  background-color: #2d3f5a;
+  color: white;
   text-align: center;
   font-style: italic;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  padding: 20px;
+  margin: 30px auto 0 auto;
 }
+
 
 /******************* Media Queries *******************/
 
@@ -202,18 +236,21 @@ footer {
     align-items: center;
   }
 
+  .contact_flex .zip_div {
+    width: 50%;
+  }
+
   .contact_flex div label {
-    flex: 1 25%;
+    width: 25%;
   }
 
   .contact_flex div input,
   #state {
-    flex: 2 75%;
+    flex-grow: 1;
   }
 
-  .contact_flex .zip_div {
-    width: 75%;
+  #zip_label,
+  #zip {
+    width: 50%;
   }
-
-
 }
